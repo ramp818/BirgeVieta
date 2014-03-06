@@ -5,7 +5,7 @@ int Division(int polinomio[],int grado,int x)
 {
     int aux=polinomio[grado],division[grado];
     division[grado]=aux;
-    for(int i=grado+1;i>=0;i--)
+    for(int i=grado-1;i>=0;i--)
     {
         division[i]=polinomio[i]+aux;
         aux=0;
