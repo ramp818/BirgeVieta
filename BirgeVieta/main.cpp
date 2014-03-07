@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-int Division(int polinomio[],int grado,int x)
+double Division(double polinomio[],int grado,double x)
 {
     int aux=polinomio[grado],division[grado];
     division[grado]=aux;
@@ -18,10 +18,11 @@ int Division(int polinomio[],int grado,int x)
 int main()
 {
     int grado;
-    int iteraciones,error;
+    int iteraciones;
+    double error;
     cout<<"Grado del polinomio"<<endl;
     cin>>grado;
-    int polinomio[grado];
+    double polinomio[grado];
     for(int i=grado;i>=0;i--)
     {
         cout<<"Coeficiente x^"<<i<<" ";
@@ -33,7 +34,7 @@ int main()
     cout<<endl;
     cout<<"Toleracia de error: ";
     cin>>error;
-    cout<<Division(polinomio,grado,error)<<endl;
+    cout<<Division(polinomio,grado,1)<<endl;
 
     return 0;
 }
